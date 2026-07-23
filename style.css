@@ -55,6 +55,7 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -2616,62 +2617,21 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(0);
 }
 
-/* Mobile Sticky Bottom Bar */
-.mobile-sticky-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(7, 7, 8, 0.95);
-    backdrop-filter: blur(12px);
-    border-top: 1.5px solid var(--color-gold-solid);
-    padding: 12px 20px;
-    box-sizing: border-box;
-    display: none;
-    z-index: 98;
-    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.5);
-    animation: slideUpMobileBar 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-@keyframes slideUpMobileBar {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-}
-
-.mobile-sticky-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #25d366, #128c7e);
-    color: #ffffff;
-    border-radius: 8px;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: var(--font-headers);
-    font-weight: 700;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
 }
 
 /* Adjustments for sticky bar on mobile screens */
 @media (max-width: 768px) {
-    .mobile-sticky-bar {
-        display: block;
-    }
-    /* Shift float balloon up so it doesn't block the sticky bar */
     .whatsapp-float-balloon {
-        bottom: 85px;
+        bottom: 20px;
         right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
+        width: 54px;
+        height: 54px;
+        font-size: 1.6rem;
     }
     .float-balloon-tooltip {
-        display: none; /* Hide tooltips on mobile */
+        display: none;
     }
+}
     /* Add extra padding at the bottom of the body to prevent footer from being hidden behind sticky bar */
     body {
         padding-bottom: 74px;
